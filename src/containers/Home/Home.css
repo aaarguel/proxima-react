@@ -1,0 +1,36 @@
+.proxima__home{
+    display: flex;
+    flex-direction: row;
+}
+
+.proxima__home-img,
+.proxima__home-container{    
+    width: 50%;
+}
+
+.proxima__home-img{
+    display: flex;
+}
+
+.proxima__home-img img{
+    width: 100%;
+}
+
+.proxima__home-container{
+    display: flex;    
+    align-items: center;
+}
+
+.proxima__home-grid{
+    vertical-align: middle;
+    max-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 120px;
+
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-rows: minmax(0, 1fr); */
+}

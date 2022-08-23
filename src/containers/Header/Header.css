@@ -1,0 +1,82 @@
+.proxima__header{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.proxima__header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 58%;        
+}
+
+.proxima__header-container h1{
+    line-height: 65px;
+    font-size: 55px;
+    color: var(--color-blue-proxima);
+    margin: 0 0 1rem 0;
+}
+
+.proxima__header-container p{    
+    font-size: 25px;
+    font-family: var(--font-light);
+    color: var(--color-blue-proxima);
+    margin: 0 0 2rem 0;
+}
+
+.proxima__header-container button{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 5px 30px var(--color-lightblue-proxima);
+}
+
+.proxima__header-container button:hover{
+    box-shadow: 0px 5px 20px var(--color-blue-proxima);
+}
+.proxima__header-container svg{
+    margin: 0 0 0 0.5rem;
+}
+.proxima__header-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 42%;
+}
+
+.proxima__header-img img{
+    height: auto;
+    
+}
+
+
+@media screen and (max-width: 550px) {
+    .proxima__header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .proxima__header-container{
+        margin: 0 0 2rem 0;
+    }
+
+    .proxima__header-container h1{        
+        font-size: 40px;        
+    }
+
+    .proxima__header-container,
+    .proxima__header-img{
+        width: 100%;
+    }
+
+    .proxima__header-container button{
+        width: 100%;
+    }
+}
