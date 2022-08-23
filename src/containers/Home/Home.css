@@ -34,3 +34,21 @@
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-rows: minmax(0, 1fr); */
 }
+
+
+@media screen and (max-width: 550px) {
+    .proxima__home{
+        flex-direction: column;
+        justify-content: center;
+        flex-direction: column-reverse !important;
+    }
+    
+    .proxima__home-img,
+    .proxima__home-container{    
+        width: 100%;
+    }
+    
+    .proxima__home-grid{
+        max-height: none ;
+    }
+}

@@ -22,5 +22,11 @@ If you want to run a build prod
 npm run build
 ```
 
-In ProximaAPI.js has the variables URLs,
+## Enviroment variables
+
+If you want use proximaAPI, you need change local variables in file *.env.local*
+
+```
+REACT_APP_API_URL
+```
 

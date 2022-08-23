@@ -1,7 +1,7 @@
 class ProximaAPI{
     
     constructor(){        
-        this.url = "https://webhook.site/83db32f0-c31e-4a86-a7c0-a97d4909701c"
+        this.url = process.env.REACT_APP_API_URL
         this.ip_url = "https://api.ipify.org?format=json";
 
     }
@@ -15,17 +15,25 @@ class ProximaAPI{
             }
         }
     }
-    postDataUser(data){
-        return {
-            url: this.url ,
-            options: {
+    async postDataUser(data){
+        try {
+            const response = await fetch(this.url, {
                 method: 'POST',
-                mode: 'cors',
+                mode: 'no-cors',
                 body: JSON.stringify(data)
+            });
+      
+            if (!response.ok) {
+              throw new Error(`Error! status: ${response.status}`);
             }
-        }
+      
+                  
+            
+            
+        } catch (err) {
+            console.log(err)
+          }
     }
-
 }
 
 export default ProximaAPI;

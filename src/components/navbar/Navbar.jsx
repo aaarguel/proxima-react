@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/Proxima_Logo.png'
 import { RiMenu3Line, RiCloseLine, RiArrowDownSLine } from 'react-icons/ri'
-import ProximaAPI from '../../helpers/ProximaAPI'
-import useFetch from '../../hooks/useFetch'
+import { UserContext, proxima } from '../../containers/App'
 
-const proxima = new ProximaAPI();
+
+
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
-    const [ip] = useFetch(proxima.getIp());    
+      
+    const user = useContext(UserContext);
 
-    useFetch(proxima.postDataUser({ip}));
+    const sendData = ()=>{
+        proxima.postDataUser(user);
+    }
+
     useEffect(()=>{
         setTimeout(()=>{
             if(toggleMenu){
@@ -71,7 +75,7 @@ const Navbar = () => {
                 <div className="proxima__navbar-sign">                
                     <button className='buttonNavbar' 
                         onClick={(e) => {e.preventDefault();
-                            window.location.href="http://crypto.grupoproxima.com"                                                    
+                            sendData();                                            
                         }}
                     type="button">Contact Us</button>
                 </div>
@@ -90,7 +94,7 @@ const Navbar = () => {
                     </div>
                     <div className="proxima__navbar-menu_container-links-sign">
                         <button type="button" onClick={(e) => {e.preventDefault();
-                                
+                            sendData();
                             }}>Contact Us</button>
                     </div>
                 </div>

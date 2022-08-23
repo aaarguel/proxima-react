@@ -66,8 +66,13 @@ body::-webkit-scrollbar-thumb {
 .App{
   margin: 0 0 8rem 0;
 }
+
 @media screen and (max-width: 550px) {
   .section__padding {
     padding: 0 2rem;
+  }
+
+  .section__margin {
+    margin: 0rem;
   }
 }
